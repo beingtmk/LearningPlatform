@@ -13,7 +13,7 @@ urlpatterns = [
     path("account/", include("account.urls")),
 
     #Course path
-    path("course", include("course.urls")),
+    path("course/", include("course.urls")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

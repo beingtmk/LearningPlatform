@@ -195,3 +195,6 @@ AUTHENTICATION_BACKENDS = [
 
 #Custom settings
 AUTH_USER_MODEL = 'course.User'
+
+ACCOUNT_SIGNUP_REDIRECT_URL = 'course_list'
+ACCOUNT_LOGIN_REDIRECT_URL = 'courses_enrolled'

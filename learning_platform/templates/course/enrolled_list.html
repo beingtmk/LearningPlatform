@@ -10,9 +10,9 @@
   <main>
     <div class="container">
       {% include "_messages.html" %}
-      <h1>Courses</h1>
+      <h1>Enrolled Courses</h1>
       <hr>
-      {% for course in object_list %}
+      {% for course in course_list.all %}
         <div class="jumbotron">
           <h2>{{ course.name }}</h2>
           <ul>
@@ -21,7 +21,7 @@
             <li> INSTRUCTOR : {{ course.instructor }} </li>
           </ul>
 
-          <button type="button" class="btn btn-primary float-right"  onclick="location.href='list/{{course.id}}/enroll'">Enroll</button>
+          <button type="button" class="btn btn-primary float-right"  onclick="location.href='{{course.id}}/unenroll'">Un-Enroll</button>
         </div>
         <br><br>
       {% empty %}

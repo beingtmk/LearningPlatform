@@ -7,17 +7,17 @@ BASE_DIR = PACKAGE_ROOT
 
 DEBUG = True
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "dev.db",
-    }
-}
-
-# import dj_database_url
 # DATABASES = {
-#     "default": dj_database_url.config()
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "dev.db",
+#     }
 # }
+
+import dj_database_url
+DATABASES = {
+    "default": dj_database_url.config()
+}
 
 ALLOWED_HOSTS = [
     "localhost",

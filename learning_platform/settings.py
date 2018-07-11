@@ -7,22 +7,22 @@ BASE_DIR = PACKAGE_ROOT
 
 DEBUG = True
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": "dev.db",
-#     }
-# }
-
-import dj_database_url
 DATABASES = {
-    "default": dj_database_url.config()
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "dev.db",
+    }
 }
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "shrouded-brushlands-26695.herokuapp.com"
-]
+# import dj_database_url
+# DATABASES = {
+#     "default": dj_database_url.config()
+# }
+#
+# ALLOWED_HOSTS = [
+#     "localhost",
+#     "shrouded-brushlands-26695.herokuapp.com"
+# ]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

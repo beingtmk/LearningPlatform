@@ -1,0 +1,32 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}pinax-project-account{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+  <main>
+    <div class="container">
+      <h1>Courses</h1>
+      <hr>
+      {% for course in object_list %}
+        <div class="jumbotron">
+          <h2>{{ course.name }}</h2>
+          <ul>
+            <li> SUBJECT : {{ course.subject }} </li>
+            <li> TYPE : {{ course.type }} </li>
+            <li> INSTRUCTOR : {{ course.instructor }} </li>
+          </ul>
+
+          <button type="button" class="btn btn-primary float-right">Enroll</button>
+        </div>
+        <br><br>
+      {% empty %}
+          <h2>No Courses yet.</h2>
+      {% endfor %}
+
+    </div>
+  </main>
+{% endblock %}

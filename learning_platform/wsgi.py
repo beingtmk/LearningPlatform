@@ -14,3 +14,7 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "learning_platform.settings")
 
 application = get_wsgi_application()
+
+#heroku settings
+#from dj_static import Cling, MediaCling
+#application = Cling(MediaCling(get_wsgi_application()))

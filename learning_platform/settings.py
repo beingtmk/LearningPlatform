@@ -21,6 +21,7 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "localhost",
+    "shrouded-brushlands-26695.herokuapp.com"
 ]
 
 # Local time zone for this installation. Choices can be found here:
